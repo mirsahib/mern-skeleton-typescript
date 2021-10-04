@@ -1,4 +1,5 @@
 import { RequestHandler,Request,Response,NextFunction } from "express";
+import errorHandler from "../helpers/errorHandler";
 import UserModel from "../models/user.model";
 
 
@@ -14,10 +15,10 @@ const create:RequestHandler = async (req:Request,res:Response)=>{
             return res.status(201).json({
                 message:"Successfully signed up"
             })
-        } catch (error) {
+        } catch (error:any) {
             console.log(error)
             return res.status(500).json({
-                error:"Internal Server error"
+                error: errorHandler.getErrorMessage(error)
             })
         }
     }else{
