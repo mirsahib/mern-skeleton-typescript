@@ -1,4 +1,4 @@
-#MERN Skeleton Typescript
+# MERN Skeleton Typescript
 
 
 # Description
