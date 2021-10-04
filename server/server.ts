@@ -9,6 +9,6 @@ mongoose.connection.on('error',()=>{
    throw new Error(`unable to connect to database`)
 })
 
-app.listen(5000,()=>{
-    console.log('Server started on port %s.',5000)
+app.listen(config.port,()=>{
+    console.log('Server started on port %s.',config.port)
 })
