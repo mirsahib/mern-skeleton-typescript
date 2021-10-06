@@ -3,7 +3,7 @@ import errorHandler from "../helpers/errorHandler";
 import UserModel from "../models/user.model";
 
 
-const create:RequestHandler = async (req:Request,res:Response)=>{
+const create = async (req:Request,res:Response):Promise<Response>=>{
     //check request body
     if(req.body!=undefined){
         // create user model
